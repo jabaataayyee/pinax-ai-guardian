@@ -1,53 +1,50 @@
-# Kotlin
--keep class kotlin.Metadata { *; }
--keep class kotlin.jvm.internal.** { *; }
--keepclassmembers class kotlin.Metadata {
-    *** invoke(...);
-}
+# Pinax AI Guardian ProGuard Rules
 
-# Room
--keep class androidx.room.** { *; }
--keep @androidx.room.Entity class * { *; }
--keepclasseswithmembers @androidx.room.Entity * {
-    @androidx.room.*;
-}
+# Keep Android components
+-keep public class * extends android.app.Activity
+-keep public class * extends android.app.Service
+-keep public class * extends android.content.BroadcastReceiver
+-keep public class * extends android.content.ContentProvider
+-keep public class * extends android.app.Fragment
+-keep public class * extends androidx.fragment.app.Fragment
 
-# Hilt
--keep class dagger.hilt.** { *; }
--keep class * extends dagger.hilt.internal.GeneratedComponent { *; }
-
-# TensorFlow Lite
+# Keep TensorFlow Lite
 -keep class org.tensorflow.** { *; }
--keep class com.google.mediapipe.** { *; }
+-keep class org.tensorflow.lite.** { *; }
+-dontwarn org.tensorflow.**
 
-# VOSK
--keep class org.vosk.** { *; }
+# Keep Room Database
+-keep class androidx.room.** { *; }
+-dontwarn androidx.room.**
 
-# Coroutines
--keep class kotlinx.coroutines.** { *; }
--keepnames class kotlinx.coroutines.internal.MainDispatcherFactory {}
--keepnames class kotlinx.coroutines.CoroutineExceptionHandler {}
--keep class kotlinx.coroutines.android.AndroidDispatcherFactory { *; }
+# Keep Hilt
+-keep class dagger.hilt.** { *; }
+-keep class hilt_aggregated_deps.** { *; }
+-keep class ** extends dagger.hilt.android.lifecycle.HiltViewModel { *; }
 
-# Keep App Classes
+# Keep Kotlin metadata
+-keepclassmembers class ** {
+    *** Companion;
+}
+-keep class kotlin.** { *; }
+-keep interface kotlin.** { *; }
+-dontwarn kotlin.**
+
+# Keep serialization
+-keep class com.google.gson.** { *; }
+-dontwarn com.google.gson.**
+-keep class kotlinx.serialization.** { *; }
+
+# Keep our app classes
 -keep class com.pinax.guardian.** { *; }
--keepclassmembers class com.pinax.guardian.** { *; }
--keep interface com.pinax.guardian.** { *; }
 
-# Security
--keep class androidx.security.** { *; }
+# Remove logging in release
+-assumenosideeffects class timber.log.Timber { *; }
+-assumenosideeffects class android.util.Log { *; }
 
-# Retrofit & OkHttp
--keep class retrofit2.** { *; }
--keep class okhttp3.** { *; }
--keepclasseswithmembers class * {
-    @retrofit2.http.<Http>* <methods>;
-}
-
-# GSON
--keepclassmembers class * {
-    @com.google.gson.annotations.SerializedName <fields>;
-}
-
-# Timber
--keep class timber.log.** { *; }
+# Optimization
+-optimizationpasses 5
+-dontusemixedcaseclassnames
+-verbose
+-allowaccessmodification
+-repackageclasses com.pinax.guardian.obfuscated

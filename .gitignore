@@ -2,10 +2,11 @@
 .gradle/
 build/
 *.apk
+*.aar
 *.ap_
-*.aab
+*.dex
 
-# Local configuration file (sdk path, etc)
+# Local configuration file
 local.properties
 
 # Android Studio
@@ -15,16 +16,41 @@ local.properties
 *.ipr
 .DS_Store
 
-# Misc
-*.log
+# Kotlin
+out/
+*.kt.bak
+
+# Generated files
+gen/
+bin/
+
+# Gradle wrapper
+gradlew
+gradlew.bat
+
+# Node
+node_modules/
+npm-debug.log
+
+# IDE
+.vscode/
+.project
+.classpath
+.c9/
 *.swp
 *.swo
 *~
 
-# AI Models (too large)
-/app/src/main/assets/models/*.gguf
-/app/src/main/assets/models/*.bin
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+eThumbs.db
+desktop.ini
 
-# NDK
-obj/
-libs/
+# AI Models (store separately)
+*.gguf
+*.bin
+*.model
