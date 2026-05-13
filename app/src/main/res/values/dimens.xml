@@ -1,34 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Default screen margins -->
-    <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="activity_vertical_margin">16dp</dimen>
-    <dimen name="small_margin">8dp</dimen>
-    <dimen name="medium_margin">16dp</dimen>
-    <dimen name="large_margin">24dp</dimen>
+    <!-- Padding -->
+    <dimen name="padding_8">8dp</dimen>
+    <dimen name="padding_12">12dp</dimen>
+    <dimen name="padding_16">16dp</dimen>
+    <dimen name="padding_20">20dp</dimen>
+    <dimen name="padding_24">24dp</dimen>
+    <dimen name="padding_32">32dp</dimen>
 
-    <!-- Text sizes -->
-    <dimen name="text_size_small">12sp</dimen>
-    <dimen name="text_size_normal">14sp</dimen>
-    <dimen name="text_size_medium">16sp</dimen>
-    <dimen name="text_size_large">20sp</dimen>
-    <dimen name="text_size_xlarge">24sp</dimen>
-    <dimen name="text_size_title">28sp</dimen>
+    <!-- Margin -->
+    <dimen name="margin_8">8dp</dimen>
+    <dimen name="margin_12">12dp</dimen>
+    <dimen name="margin_16">16dp</dimen>
+    <dimen name="margin_20">20dp</dimen>
+    <dimen name="margin_24">24dp</dimen>
 
-    <!-- Corner radius -->
-    <dimen name="corner_radius_small">8dp</dimen>
-    <dimen name="corner_radius_medium">12dp</dimen>
-    <dimen name="corner_radius_large">16dp</dimen>
-    <dimen name="corner_radius_xlarge">20dp</dimen>
+    <!-- Corner Radius -->
+    <dimen name="corner_small">4dp</dimen>
+    <dimen name="corner_medium">8dp</dimen>
+    <dimen name="corner_large">16dp</dimen>
+    <dimen name="corner_xl">24dp</dimen>
+    <dimen name="corner_circle">50dp</dimen>
 
-    <!-- Button dimensions -->
+    <!-- Text Sizes -->
+    <dimen name="text_small">12sp</dimen>
+    <dimen name="text_body">14sp</dimen>
+    <dimen name="text_body_large">16sp</dimen>
+    <dimen name="text_title_small">18sp</dimen>
+    <dimen name="text_title">20sp</dimen>
+    <dimen name="text_headline">24sp</dimen>
+    <dimen name="text_display">32sp</dimen>
+
+    <!-- Icon Sizes -->
+    <dimen name="icon_small">20dp</dimen>
+    <dimen name="icon_medium">24dp</dimen>
+    <dimen name="icon_large">32dp</dimen>
+    <dimen name="icon_xlarge">48dp</dimen>
+
+    <!-- Component Heights -->
     <dimen name="button_height">48dp</dimen>
-    <dimen name="button_corner_radius">8dp</dimen>
+    <dimen name="toolbar_height">56dp</dimen>
+    <dimen name="bottom_nav_height">64dp</dimen>
+    <dimen name="card_height">120dp</dimen>
 
-    <!-- Icon sizes -->
-    <dimen name="icon_size_small">20dp</dimen>
-    <dimen name="icon_size_normal">24dp</dimen>
-    <dimen name="icon_size_medium">32dp</dimen>
-    <dimen name="icon_size_large">48dp</dimen>
-    <dimen name="icon_size_xlarge">64dp</dimen>
+    <!-- AI Face Size -->
+    <dimen name="ai_face_size">200dp</dimen>
+    <dimen name="ai_face_small">120dp</dimen>
 </resources>

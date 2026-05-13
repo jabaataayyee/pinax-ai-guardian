@@ -1,41 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme -->
-    <style name="Theme.PinaxAIGuardian" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <!-- Primary brand color -->
+<resources>
+    <!-- Base Theme -->
+    <style name="Theme.PinaxAIGuardian" parent="Theme.MaterialComponents.NoActionBar">
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryVariant">@color/primary_dark</item>
-        <item name="colorSecondary">@color/neon_green</item>
-        <item name="colorSecondaryVariant">@color/accent_cyan</item>
-        <item name="colorError">@color/btn_danger</item>
-        <item name="colorBackground">@color/bg_dark</item>
-        <item name="colorSurface">@color/card_bg</item>
-        <item name="android:colorBackground">@color/bg_dark</item>
+        <item name="colorSecondary">@color/accent</item>
+        <item name="colorSecondaryVariant">@color/accent_dark</item>
+        <item name="android:colorBackground">@color/background</item>
         <item name="android:colorForeground">@color/text_primary</item>
-        <item name="android:textColorPrimary">@color/text_primary</item>
-        <item name="android:textColorSecondary">@color/text_secondary</item>
+        <item name="android:statusBarColor">@color/primary_dark</item>
+        <item name="android:navigationBarColor">@color/primary_dark</item>
+        <item name="android:enforceNavigationBarContrast">false</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+    </style>
 
-        <!-- Text appearance -->
-        <item name="android:fontFamily">@font/roboto</item>
-        <item name="fontFamily">@font/roboto</item>
+    <!-- Text Styles -->
+    <style name="TextAppearance.Display" parent="TextAppearance.MaterialComponents.Headline1">
+        <item name="android:textSize">@dimen/text_display</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.Headline" parent="TextAppearance.MaterialComponents.Headline3">
+        <item name="android:textSize">@dimen/text_headline</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.Title" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="android:textSize">@dimen/text_title</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.Body" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textSize">@dimen/text_body_large</item>
+        <item name="android:textColor">@color/text_primary</item>
+    </style>
+
+    <style name="TextAppearance.Caption" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textSize">@dimen/text_small</item>
+        <item name="android:textColor">@color/text_secondary</item>
     </style>
 
     <!-- Button Styles -->
-    <style name="Widget.App.Button.OutlinedButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+    <style name="Widget.PinaxAIGuardian.Button" parent="Widget.MaterialComponents.Button">
         <item name="android:textColor">@color/text_primary</item>
-        <item name="strokeColor">@color/primary</item>
+        <item name="android:textSize">@dimen/text_body_large</item>
+        <item name="android:paddingLeft">@dimen/padding_24</item>
+        <item name="android:paddingRight">@dimen/padding_24</item>
+        <item name="android:minHeight">@dimen/button_height</item>
+        <item name="cornerRadius">@dimen/corner_large</item>
+        <item name="materialThemeOverlay">@style/ThemeOverlay.Button.Accent</item>
     </style>
 
-    <!-- Text Input Styles -->
-    <style name="Widget.App.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-        <item name="android:textColorHint">@color/text_muted</item>
-        <item name="boxStrokeColor">@color/primary</item>
-        <item name="hintTextColor">@color/primary</item>
+    <style name="ThemeOverlay.Button.Accent" parent="">
+        <item name="colorPrimary">@color/accent</item>
     </style>
 
-    <!-- Toolbar Styles -->
-    <style name="Widget.App.Toolbar" parent="Widget.AppCompat.Toolbar">
-        <item name="android:background">@color/bg_darker</item>
-        <item name="android:elevation">4dp</item>
+    <!-- Card Styles -->
+    <style name="Widget.PinaxAIGuardian.CardView" parent="Widget.MaterialComponents.CardView">
+        <item name="cardBackgroundColor">@color/surface</item>
+        <item name="cardCornerRadius">@dimen/corner_large</item>
+        <item name="cardElevation">4dp</item>
+        <item name="strokeColor">@color/outline</item>
+        <item name="strokeWidth">1dp</item>
     </style>
 </resources>

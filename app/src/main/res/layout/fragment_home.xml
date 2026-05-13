@@ -1,260 +1,172 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_dark">
+    android:background="@color/background">
 
-    <!-- Animated Background Gradient -->
-    <View
-        android:id="@+id/bg_gradient"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/gradient_bg" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_16">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scrollbars="none">
-
-        <LinearLayout
+        <!-- Header -->
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
+            android:text="@string/home_title"
+            android:textAppearance="@style/TextAppearance.Headline"
+            android:textColor="@color/accent" />
 
-            <!-- AI Guardian Face -->
-            <FrameLayout
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="24dp"
-                android:layout_marginBottom="32dp">
+        <!-- AI Face Container -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ai_face_size"
+            android:layout_marginVertical="@dimen/margin_24"
+            android:background="@drawable/shape_circular_progress">
 
-                <!-- Outer Glow Circle -->
-                <View
-                    android:id="@+id/glow_outer"
-                    android:layout_width="200dp"
-                    android:layout_height="200dp"
-                    android:background="@drawable/circle_glow"
-                    android:elevation="2dp" />
+            <ImageView
+                android:id="@+id/ai_face"
+                android:layout_width="@dimen/ai_face_size"
+                android:layout_height="@dimen/ai_face_size"
+                android:layout_gravity="center"
+                android:contentDescription="@string/app_name"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_home" />
+        </FrameLayout>
 
-                <!-- AI Face Avatar -->
-                <ImageView
-                    android:id="@+id/ai_face"
-                    android:layout_width="180dp"
-                    android:layout_height="180dp"
-                    android:layout_gravity="center"
-                    android:contentDescription="@string/ai_guardian_face"
-                    android:scaleType="centerInside"
-                    android:src="@drawable/ic_ai_face" />
+        <!-- Threat Level Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_16"
+            app:cardBackgroundColor="@color/surface"
+            app:cardCornerRadius="@dimen/corner_large"
+            app:cardElevation="4dp"
+            app:strokeColor="@color/outline"
+            app:strokeWidth="1dp">
 
-                <!-- Status Indicator Dot -->
-                <View
-                    android:id="@+id/status_indicator"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_gravity="top|end"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:background="@drawable/circle_status_safe"
-                    android:elevation="4dp" />
-            </FrameLayout>
-
-            <!-- Threat Index Card -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/threat_index_card"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="8dp"
-                android:layout_marginBottom="24dp"
-                app:cardBackgroundColor="@color/card_bg"
-                app:cardCornerRadius="16dp"
-                app:cardElevation="8dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="20dp">
-
-                    <!-- Threat Level Title -->
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/threat_index"
-                        android:textColor="@color/text_primary"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:layout_marginBottom="12dp" />
-
-                    <!-- Threat Level Progress Bar -->
-                    <ProgressBar
-                        android:id="@+id/threat_progress"
-                        style="@android:style/Widget.ProgressBar.Horizontal"
-                        android:layout_width="match_parent"
-                        android:layout_height="8dp"
-                        android:layout_marginBottom="8dp"
-                        android:max="4"
-                        android:progress="0"
-                        android:progressDrawable="@drawable/threat_progress_drawable" />
-
-                    <!-- Threat Level Status -->
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="space_between">
-
-                        <TextView
-                            android:id="@+id/threat_status"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="@string/status_safe"
-                            android:textColor="@color/neon_green"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:id="@+id/threat_value"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="0/4"
-                            android:textColor="@color/text_secondary"
-                            android:textSize="14sp" />
-                    </LinearLayout>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <!-- Guardian Status Card -->
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="8dp"
-                android:layout_marginBottom="24dp"
-                app:cardBackgroundColor="@color/card_bg"
-                app:cardCornerRadius="16dp"
-                app:cardElevation="8dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="20dp">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/guardian_status"
-                        android:textColor="@color/text_primary"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:layout_marginBottom="12dp" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="space_between"
-                        android:layout_marginBottom="12dp">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/listening"
-                            android:textColor="@color/text_secondary"
-                            android:textSize="14sp" />
-
-                        <ImageView
-                            android:id="@+id/listening_status"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:contentDescription="@string/listening"
-                            android:src="@drawable/ic_listening_off"
-                            android:tint="@color/neon_green" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="space_between"
-                        android:layout_marginBottom="12dp">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/ai_model_loaded"
-                            android:textColor="@color/text_secondary"
-                            android:textSize="14sp" />
-
-                        <ImageView
-                            android:id="@+id/model_status"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:contentDescription="@string/ai_model_loaded"
-                            android:src="@drawable/ic_check_circle"
-                            android:tint="@color/neon_green" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="space_between">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/battery_saver"
-                            android:textColor="@color/text_secondary"
-                            android:textSize="14sp" />
-
-                        <ImageView
-                            android:id="@+id/battery_status"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:contentDescription="@string/battery_saver"
-                            android:src="@drawable/ic_battery_check"
-                            android:tint="@color/neon_green" />
-                    </LinearLayout>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <!-- Quick Actions -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:layout_marginBottom="32dp"
-                android:baselineAligned="false">
+                android:orientation="vertical"
+                android:padding="@dimen/padding_16">
 
-                <!-- Start Listening Button -->
-                <Button
-                    android:id="@+id/btn_start_listening"
-                    android:layout_width="0dp"
-                    android:layout_height="48dp"
-                    android:layout_weight="1"
-                    android:layout_marginEnd="8dp"
-                    android:text="@string/start_listening"
-                    android:textColor="@color/text_primary"
-                    android:backgroundTint="@color/btn_primary"
-                    android:textAllCaps="false" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/threat_level"
+                    android:textAppearance="@style/TextAppearance.Title"
+                    android:textColor="@color/text_primary" />
 
-                <!-- Emergency Button -->
-                <Button
-                    android:id="@+id/btn_emergency"
-                    android:layout_width="0dp"
-                    android:layout_height="48dp"
-                    android:layout_weight="1"
-                    android:text="@string/emergency"
-                    android:textColor="@color/text_light"
-                    android:backgroundTint="@color/btn_emergency"
-                    android:textAllCaps="false" />
+                <!-- Threat Level Indicator -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_12"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/threat_level_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/threat_safe"
+                        android:textAppearance="@style/TextAppearance.Display"
+                        android:textColor="@color/threat_safe" />
+
+                    <ProgressBar
+                        android:id="@+id/threat_level_progress"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:max="4"
+                        android:progress="0" />
+                </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
-    </ScrollView>
+        </com.google.android.material.card.MaterialCardView>
 
-</FrameLayout>
+        <!-- Status Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_16"
+            app:cardBackgroundColor="@color/surface"
+            app:cardCornerRadius="@dimen/corner_large"
+            app:cardElevation="4dp"
+            app:strokeColor="@color/outline"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_16">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:layout_marginRight="@dimen/margin_12"
+                        android:background="@drawable/shape_circular_progress"
+                        android:id="@+id/status_indicator" />
+
+                    <TextView
+                        android:id="@+id/status_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/status_online"
+                        android:textAppearance="@style/TextAppearance.Body"
+                        android:textColor="@color/text_primary" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Emergency SOS Button -->
+        <Button
+            android:id="@+id/emergency_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:background="@drawable/shape_rounded_button"
+            android:text="@string/emergency_button"
+            android:textColor="@color/text_inverse"
+            android:textSize="@dimen/text_title"
+            android:textStyle="bold" />
+
+        <!-- Guardian Control Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16"
+            android:orientation="horizontal"
+            android:spacing="@dimen/margin_12">
+
+            <Button
+                android:id="@+id/start_guardian_btn"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_weight="1"
+                android:background="@drawable/shape_rounded_button"
+                android:text="@string/start_guardian"
+                android:textColor="@color/text_inverse" />
+
+            <Button
+                android:id="@+id/stop_guardian_btn"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/button_height"
+                android:layout_weight="1"
+                android:background="@drawable/shape_rounded_button"
+                android:text="@string/stop_guardian"
+                android:textColor="@color/text_inverse" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
