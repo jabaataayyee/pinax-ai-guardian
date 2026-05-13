@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home_dest">
+
+    <!-- Home Fragment -->
+    <fragment
+        android:id="@+id/home_dest"
+        android:name="com.pinax.guardian.ui.home.HomeFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_home" />
+
+    <!-- Scan Fragment -->
+    <fragment
+        android:id="@+id/scan_dest"
+        android:name="com.pinax.guardian.ui.scan.ScanFragment"
+        android:label="@string/scan"
+        tools:layout="@layout/fragment_scan" />
+
+    <!-- Journal Fragment -->
+    <fragment
+        android:id="@+id/journal_dest"
+        android:name="com.pinax.guardian.ui.journal.JournalFragment"
+        android:label="@string/journal"
+        tools:layout="@layout/fragment_journal" />
+
+    <!-- Medic Fragment -->
+    <fragment
+        android:id="@+id/medic_dest"
+        android:name="com.pinax.guardian.ui.medic.MedicFragment"
+        android:label="@string/medic"
+        tools:layout="@layout/fragment_medic" />
+
+    <!-- Settings Fragment -->
+    <fragment
+        android:id="@+id/settings_dest"
+        android:name="com.pinax.guardian.ui.settings.SettingsFragment"
+        android:label="@string/settings"
+        tools:layout="@layout/fragment_settings" />
+</navigation>

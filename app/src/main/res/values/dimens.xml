@@ -1,41 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Padding and Margins -->
-    <dimen name="padding_xs">4dp</dimen>
-    <dimen name="padding_sm">8dp</dimen>
-    <dimen name="padding_md">16dp</dimen>
-    <dimen name="padding_lg">24dp</dimen>
-    <dimen name="padding_xl">32dp</dimen>
+    <!-- Default screen margins -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="small_margin">8dp</dimen>
+    <dimen name="medium_margin">16dp</dimen>
+    <dimen name="large_margin">24dp</dimen>
 
-    <!-- Text Sizes -->
-    <dimen name="text_xs">10sp</dimen>
-    <dimen name="text_sm">12sp</dimen>
-    <dimen name="text_md">14sp</dimen>
-    <dimen name="text_lg">18sp</dimen>
-    <dimen name="text_xl">24sp</dimen>
-    <dimen name="text_2xl">32sp</dimen>
-    <dimen name="text_3xl">40sp</dimen>
+    <!-- Text sizes -->
+    <dimen name="text_size_small">12sp</dimen>
+    <dimen name="text_size_normal">14sp</dimen>
+    <dimen name="text_size_medium">16sp</dimen>
+    <dimen name="text_size_large">20sp</dimen>
+    <dimen name="text_size_xlarge">24sp</dimen>
+    <dimen name="text_size_title">28sp</dimen>
 
-    <!-- Dimensions -->
-    <dimen name="corner_radius_sm">4dp</dimen>
-    <dimen name="corner_radius_md">8dp</dimen>
-    <dimen name="corner_radius_lg">16dp</dimen>
-    <dimen name="corner_radius_xl">24dp</dimen>
+    <!-- Corner radius -->
+    <dimen name="corner_radius_small">8dp</dimen>
+    <dimen name="corner_radius_medium">12dp</dimen>
+    <dimen name="corner_radius_large">16dp</dimen>
+    <dimen name="corner_radius_xlarge">20dp</dimen>
 
-    <!-- Button Sizes -->
+    <!-- Button dimensions -->
     <dimen name="button_height">48dp</dimen>
-    <dimen name="button_height_small">40dp</dimen>
+    <dimen name="button_corner_radius">8dp</dimen>
 
-    <!-- Icon Sizes -->
-    <dimen name="icon_xs">16dp</dimen>
-    <dimen name="icon_sm">24dp</dimen>
-    <dimen name="icon_md">32dp</dimen>
-    <dimen name="icon_lg">48dp</dimen>
-    <dimen name="icon_xl">64dp</dimen>
-
-    <!-- Elevation -->
-    <dimen name="elevation_sm">2dp</dimen>
-    <dimen name="elevation_md">4dp</dimen>
-    <dimen name="elevation_lg">8dp</dimen>
-
+    <!-- Icon sizes -->
+    <dimen name="icon_size_small">20dp</dimen>
+    <dimen name="icon_size_normal">24dp</dimen>
+    <dimen name="icon_size_medium">32dp</dimen>
+    <dimen name="icon_size_large">48dp</dimen>
+    <dimen name="icon_size_xlarge">64dp</dimen>
 </resources>

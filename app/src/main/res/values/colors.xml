@@ -1,40 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Primary Colors -->
-    <color name="primary">#0D47A1</color>
-    <color name="primary_dark">#0A3D91</color>
-    <color name="primary_light">#1565C0</color>
+    <color name="primary">#1F51FF</color>
+    <color name="primary_dark">#0033CC</color>
+    <color name="primary_light">#4D7FFF</color>
 
     <!-- Accent Colors -->
-    <color name="accent">#00E676</color>
-    <color name="accent_dark">#00C853</color>
-    <color name="accent_light">#69F0AE</color>
+    <color name="neon_green">#00FF41</color>
+    <color name="neon_green_dark">#00CC33</color>
+    <color name="accent_cyan">#00FFFF</color>
+    <color name="accent_pink">#FF006E</color>
 
     <!-- Background Colors -->
-    <color name="background">#0A0E27</color>
-    <color name="surface">#1A1F3A</color>
-    <color name="surface_variant">#2A2F4A</color>
+    <color name="bg_dark">#0A0E27</color>
+    <color name="bg_darker">#050812</color>
+    <color name="bg_card">#1A2347</color>
 
-    <!-- Status Colors -->
-    <color name="safe">#4CAF50</color>
-    <color name="attention">#FFC107</color>
-    <color name="warning">#FF9800</color>
-    <color name="danger">#FF5252</color>
-    <color name="critical">#F50057</color>
+    <!-- Card Background -->
+    <color name="card_bg">#141B35</color>
 
     <!-- Text Colors -->
     <color name="text_primary">#FFFFFF</color>
-    <color name="text_secondary">#B0BEC5</color>
-    <color name="text_tertiary">#78909C</color>
+    <color name="text_secondary">#B0B9C1</color>
+    <color name="text_light">#E8E8E8</color>
+    <color name="text_muted">#6B7280</color>
 
-    <!-- Special Colors -->
-    <color name="glowing_green">#00FF88</color>
-    <color name="glowing_blue">#00AAFF</color>
-    <color name="glowing_red">#FF3366</color>
+    <!-- Button Colors -->
+    <color name="btn_primary">#1F51FF</color>
+    <color name="btn_secondary">#4D7FFF</color>
+    <color name="btn_emergency">#FF006E</color>
+    <color name="btn_danger">#FF3333</color>
+    <color name="btn_success">#00FF41</color>
 
-    <!-- Utility Colors -->
-    <color name="transparent">#00000000</color>
-    <color name="black">#000000</color>
-    <color name="white">#FFFFFF</color>
+    <!-- Status Colors -->
+    <color name="status_safe">#00FF41</color>
+    <color name="status_attention">#FFD700</color>
+    <color name="status_warning">#FFA500</color>
+    <color name="status_danger">#FF6B6B</color>
+    <color name="status_critical">#FF0000</color>
 
+    <!-- Navigation -->
+    <color name="nav_item_tint">#B0B9C1</color>
+    <color name="nav_item_selected">#00FF41</color>
+
+    <!-- Threat Levels -->
+    <color name="threat_level_0">#00FF41</color>
+    <color name="threat_level_1">#FFD700</color>
+    <color name="threat_level_2">#FFA500</color>
+    <color name="threat_level_3">#FF6B6B</color>
+    <color name="threat_level_4">#FF0000</color>
+
+    <!-- Divider & Borders -->
+    <color name="divider">#2D3748</color>
+    <color name="border">#374151</color>
 </resources>
